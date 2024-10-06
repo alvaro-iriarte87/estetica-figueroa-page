@@ -10,6 +10,7 @@ export default defineConfig({
     vue(),
     vueDevTools(),
   ],
+  base:'https://alvaro-iriarte87.github.io/estetica-figueroa-page',
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
