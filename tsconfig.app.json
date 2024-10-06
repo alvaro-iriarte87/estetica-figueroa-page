@@ -1,6 +1,10 @@
 {
   "extends": "@vue/tsconfig/tsconfig.dom.json",
-  "include": ["env.d.ts", "src/**/*", "src/**/*.vue"],
+  "include": [
+    "env.d.ts",
+    "src/**/*",
+    "src/**/*.vue"  // Asegúrate de que esta línea esté presente
+  ],
   "exclude": ["src/**/__tests__/*"],
   "compilerOptions": {
     "composite": true,
@@ -9,6 +13,9 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
-    }
+    },
+    "skipLibCheck": true,  // Opcional: evita verificar las bibliotecas para acelerar la compilación
+    "strict": true,        // Opcional: habilita todas las comprobaciones estrictas
+    "esModuleInterop": true // Opcional: habilita la interoperabilidad de módulos
   }
 }
